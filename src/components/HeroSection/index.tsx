@@ -1,6 +1,6 @@
-import Button from './Button';
-import NameDisplay from './NameDisplay';
-import Text from './Text';
+import Button from '../Button';
+import NameDisplay from '../NameDisplay';
+import Text from '../Text';
 
 function HeroSection() {
   const onContact = () => {};
