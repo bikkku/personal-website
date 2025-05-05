@@ -57,8 +57,8 @@ function AboutSection() {
             underline="focus"
             isExternal
             showAnchorIcon
-            href="https://github.com/bikkku"
             className="font-bold text-lg !text-blue-600"
+            href="https://github.com/bikkku"
           >
             my GitHub
           </Link>
