@@ -1,6 +1,6 @@
 # WORK IN PROGRESS
 
------
+Colour scheme is Umbreon's colour palette from [here](https://pokepalettes.com/#umbreon).
 
 # React + TypeScript + Vite
 
