@@ -8,9 +8,7 @@ type HeadingProps = {
 
 const Heading: React.FC<HeadingProps> = ({ children, className }) => {
   return (
-    <h1
-      className={clsx(className, 'text-5xl font-mono font-bold text-teal-dark')}
-    >
+    <h1 className={clsx(className, 'text-5xl font-mono font-bold text-accent')}>
       {children}
     </h1>
   );

@@ -15,7 +15,7 @@ function HeroSection() {
       </div>
       <div className="w-fit ml-auto flex flex-col py-4 text-right my-auto">
         <NameDisplay />
-        <Text className="!text-xl text-teal-dark font-bold !font-mono">
+        <Text className="!text-xl !text-accent-dark font-bold !font-mono">
           Software Engineer based in AU/NZ
         </Text>
         <Button onClick={onContact} className="ml-auto mt-12">

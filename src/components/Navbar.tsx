@@ -29,13 +29,13 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
     <div
       className={clsx(
         className,
-        'w-[96.5%] h-12 bg-teal-dark shadow-2xl flex items-center px-12 rounded-4xl rounded-t-none z-20'
+        'w-[96.5%] h-12 bg-primary-dark shadow-2xl flex items-center px-12 rounded-4xl rounded-t-none z-20'
       )}
     >
       {tabs.map((tab) => {
         return (
           <button key={tab.value}>
-            <Text className="!text-sm font-bold mx-4 text-mint-light hover:text-white cursor-pointer">
+            <Text className="!text-sm font-bold mx-4 !text-accent hover:!text-accent-dark cursor-pointer">
               {tab.label}
             </Text>
           </button>

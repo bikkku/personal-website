@@ -1,11 +1,18 @@
 @import 'tailwindcss';
-
-@import 'tailwindcss';
 @plugin './hero.ts';
 @source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
-@custom-variant dark (&:is(.dark *));
 
 @theme {
+  /* PokePalette values */
+  --color-primary: #29314a;
+  --color-secondary: #62627b;
+  --color-accent: #eed552;
+
+  /* PokeExtended */
+  --color-primary-dark: #14151a;
+  --color-accent-dark: #b49429;
+
+  /* Custom values */
   --color-mint-light: #bfffed;
   --color-mint: #7fcfa8;
   --color-mint-dark: #558b71;
