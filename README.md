@@ -1,4 +1,8 @@
-# WORK IN PROGRESS
+## Page is deployed but still a work in progress
+
+## TODO:
+- Fix mobile styling
+- Mess around with animation libraries
 
 Colour scheme is Umbreon's colour palette from [here](https://pokepalettes.com/#umbreon).
 
