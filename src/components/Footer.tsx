@@ -5,14 +5,14 @@ import Button from './Button';
 import emailjs from '@emailjs/browser';
 
 function Footer() {
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
         'service_d4ix2oc',
         'template_cv5m1h4',
-        e.target,
+        e.target as HTMLFormElement,
         'YZai2jswJpcpME0H2'
       )
       .then(
