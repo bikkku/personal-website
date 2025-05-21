@@ -11,6 +11,7 @@ function AboutSection() {
     <SectionContainer
       headerText="About Me"
       innerClassName=" flex flex-col lg:flex-row justify-between gap-12"
+      id="about"
     >
       <div className="flex flex-col">
         <Text className="font-bold">Hello! My name is Jack.</Text>

@@ -15,7 +15,8 @@ function MediaSection() {
     <SectionContainer
       headerText="Media"
       headerClassName="ml-auto"
-      innerClassName="flex flex-col md:flex-row md:justify-between md:gap-20"
+      innerClassName="flex flex-col md:flex-row md:justify-between md:gap-20 mb-12"
+      id="media"
     >
       <div className="flex flex-col md:w-3/5">
         <Heading className="!text-3xl mb-2 !text-primary">
@@ -116,15 +117,19 @@ function MediaSection() {
 
         <PhotoProvider>
           <div className="flex w-full">
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col w-full mr-3">
               <PhotoView src={`/assets/niko.jpg`}>
                 <img
-                  className="border-4 border-primary rounded-lg mr-3 mb-4 cursor-pointer"
+                  className="border-4 border-primary rounded-lg mb-4 cursor-pointer"
                   alt={'niko'}
                   src={`/assets/niko.jpg`}
                 />
               </PhotoView>
-              <Text>Photo with Nikola "Niko" Kovač</Text>
+              <div className="rounded-full text-center bg-primary -mt-10 px-4 py-2 mx-auto">
+                <Text className="!text-accent font-bold">
+                  Photo with Nikola "Niko" Kovač
+                </Text>
+              </div>
             </div>
 
             <div className="flex flex-col justify-between -gap-y-1 max-w-1/2">

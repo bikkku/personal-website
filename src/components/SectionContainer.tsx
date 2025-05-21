@@ -8,6 +8,7 @@ type SectionContainerProps = {
   className?: string;
   headerClassName?: string;
   innerClassName?: string;
+  id?: string;
 };
 
 const SectionContainer: React.FC<SectionContainerProps> = ({
@@ -16,10 +17,12 @@ const SectionContainer: React.FC<SectionContainerProps> = ({
   className,
   headerClassName,
   innerClassName,
+  id,
 }) => {
   return (
     <div
       className={clsx(className, 'w-full h-full flex flex-col min-h-screen')}
+      id={id}
     >
       <Heading className={clsx(headerClassName)}>{headerText}</Heading>
       <div

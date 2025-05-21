@@ -1,7 +1,7 @@
 import AboutSection from '../../components/AboutSection';
 import HeroSection from '../../components/HeroSection';
 import MediaSection from '../../components/MediaSection';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/Navigation/Navbar';
 
 function Home() {
   return (
