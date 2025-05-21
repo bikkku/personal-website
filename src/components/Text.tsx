@@ -8,9 +8,9 @@ type TextProps = {
 
 const Text: React.FC<TextProps> = ({ children, className }) => {
   return (
-    <p className={clsx(className, 'text-lg font-sans text-primary')}>
+    <div className={clsx(className, 'text-lg font-sans text-primary')}>
       {children}
-    </p>
+    </div>
   );
 };
 

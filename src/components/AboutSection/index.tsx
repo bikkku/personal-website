@@ -25,7 +25,7 @@ function AboutSection() {
           have worked on web applications in a startup environment. Here are a
           list of my skills:
         </Text>
-        <div className="border border-4 border-primary px-32 rounded-l-full rounded-r-full w-full grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-x-2 bg-secondary mt-4 shadow-xl">
+        <div className="border border-4 border-primary rounded-4xl w-full grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-x-2 bg-secondary mt-4 shadow-xl">
           {skills.map((skill) => {
             return (
               <div
@@ -37,7 +37,7 @@ function AboutSection() {
                     src={`/svg/skills/${skill.src}.svg`}
                     className="w-14 h-14 mx-auto"
                   />
-                  <Text className="text-md text-primary font-bold font-mono">
+                  <Text className="text-sm lg:text-md text-primary font-bold font-mono">
                     {skill.label}
                   </Text>
                 </div>

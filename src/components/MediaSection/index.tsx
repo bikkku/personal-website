@@ -8,6 +8,7 @@ import LightGallery from 'lightgallery/react';
 import { Link } from '@heroui/react';
 import { fullbodies, stickfigures } from './data';
 import Gallery from '../Gallery';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 function MediaSection() {
   return (
@@ -16,7 +17,7 @@ function MediaSection() {
       headerClassName="ml-auto"
       innerClassName="flex flex-col md:flex-row md:justify-between md:gap-20"
     >
-      <div className="flex flex-col w-3/5">
+      <div className="flex flex-col md:w-3/5">
         <Heading className="!text-3xl mb-2 !text-primary">
           Art & Animation
         </Heading>
@@ -24,7 +25,7 @@ function MediaSection() {
           <img
             alt="totoro"
             src="/assets/art/totoro.jpeg"
-            className="rounded-full md:max-w-1/2  mt-4 cursor-pointer"
+            className="rounded-full md:max-w-1/2 border-4 border-primary mt-4 cursor-pointer"
           />
         </LightGallery>
         <div className="w-full">
@@ -48,7 +49,8 @@ function MediaSection() {
             This time, I drew inspiration from professional Sakuga, which is a
             term used to describe particularly high-quality and striking
             animation sequences. My favourite sources of this come from shows
-            like Mob Psycho, Hunter x Hunter, and Ping Pong the animation.
+            like Mob Psycho, Ping Pong the animation, and many works from Studio
+            Ghibli.
           </Text>
           <Gallery
             main={{ alt: 'saitama', src: 'saitama.gif' }}
@@ -69,17 +71,80 @@ function MediaSection() {
           </Link>
         </Text>
       </div>
-      <div className="w-full ml-auto max-w-2/5">
+      <div className="w-full ml-auto md:max-w-2/5">
         <Text>
-          Outside of software development, I'm passionate about exploring
-          creativity through digital media. This section showcases my work in
-          gaming content, art, and animation. Whether through gameplay montages
-          or original artwork, I enjoy using creative outlets to experiment,
-          engage audiences, and continuously grow as a visual thinker.
+          Outside of software development, I love exploring creativity through
+          digital media. This section showcases my work in gaming content, art,
+          and animation. Whether through gameplay montages or original artwork,
+          I enjoy using creative outlets to experiment, engage audiences, and
+          just simply to express myself. The videos I make are just for fun,
+          targeted mostly towards my friends, so videos may include inside
+          jokes. Check out my channel{' '}
+          <Link
+            underline="focus"
+            isExternal
+            showAnchorIcon
+            className="font-bold text-lg !text-blue-600"
+            href="https://www.youtube.com/@bikkku"
+          >
+            here.
+          </Link>
+        </Text>
+
+        <Text className="mt-4 -mb-2">
+          Here's a featured YouTube video:{' '}
+          <Text className="font-bold">Aristocrat Aimer (CS2 Montage)</Text>
         </Text>
         <div className="mx-auto 3 h-fit rounded-lg mt-4 border-4 border-primary">
           <LiteYouTubeEmbed id="n0wvf_vKtNs" title="Counter-Strike Montage" />
         </div>
+        <Text className="mt-8 mb-4">
+          One of my greatest passions is eSports, I love watching the pinnacle
+          of video games I am interested in through both online live broadcasts
+          as well as attending events in person when given the opportunity.
+          Every aspect of eSports is exciting to me, from the anxious shuffling
+          of rosters during the offseason, to the intensity of the winning
+          moment during the biggest tournament of the year, and especially
+          following the storylines and histories of the players and teams that
+          create more exciting matchups.
+        </Text>
+        <Text className="mb-4">
+          My favourite titles to watch are: Counter-Strike, League of Legends,
+          and highly mechanical platform fighters such as Super Smash Bros.
+          Melee and Rivals of Aether 2.
+        </Text>
+
+        <PhotoProvider>
+          <div className="flex w-full">
+            <div className="flex flex-col w-full">
+              <PhotoView src={`/assets/niko.jpg`}>
+                <img
+                  className="border-4 border-primary rounded-lg mr-3 mb-4 cursor-pointer"
+                  alt={'niko'}
+                  src={`/assets/niko.jpg`}
+                />
+              </PhotoView>
+              <Text>Photo with Nikola "Niko" Kovač</Text>
+            </div>
+
+            <div className="flex flex-col justify-between -gap-y-1 max-w-1/2">
+              <PhotoView src={`/assets/IEMmelb.jpg`}>
+                <img
+                  className="border-4 border-primary rounded-lg mb-3 w-full max-h-1/2 cursor-pointer"
+                  alt={'crowd'}
+                  src={`/assets/IEMmelb.jpg`}
+                />
+              </PhotoView>
+              <PhotoView src={`/assets/melb_desk`}>
+                <img
+                  className="border-4 border-primary rounded-lg mb-3 w-full max-h-1/2 cursor-pointer"
+                  alt={'analysts'}
+                  src={`/assets/melb_desk.jpg`}
+                />
+              </PhotoView>
+            </div>
+          </div>
+        </PhotoProvider>
       </div>
     </SectionContainer>
   );

@@ -58,9 +58,19 @@ export const skills = [
     src: 'next.js',
   },
   {
+    id: 'nextui',
+    label: 'NextUI',
+    src: 'nextui',
+  },
+  {
     id: 'html5',
     label: 'HTML',
     src: 'html-5',
+  },
+  {
+    id: 'css',
+    label: 'CSS',
+    src: 'css',
   },
   {
     id: 'tailwind',
