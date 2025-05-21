@@ -1,8 +1,11 @@
 ## Page is deployed but still a work in progress
+Still needs a bunch of styling upgrades, but basic info is all there.
 
-## TODO:
+### TODO:
+- Add more to skills section
 - Fix mobile styling
 - Mess around with animation libraries
+- Update CV file
 
 Colour scheme is Umbreon's colour palette from [here](https://pokepalettes.com/#umbreon).
 
