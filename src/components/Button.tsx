@@ -6,7 +6,8 @@ type ButtonProps = {
   children: string;
   className?: string;
   variant?: 'primary' | 'inverted';
-  onClick: () => void;
+  onClick?: () => void;
+  type?: 'submit' | 'reset' | 'button' | undefined;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -14,14 +15,19 @@ const Button: React.FC<ButtonProps> = ({
   className,
   variant = 'primary',
   onClick,
+  type = undefined,
 }) => {
+  const buttonStyles =
+    'text-lg font-bold px-6 py-2 group rounded-l-full rounded-r-full max-w-fit cursor-pointer';
   return variant === 'primary' ? (
     <button
+      type={type}
       className={clsx(
         className,
-        'text-lg font-bold px-6 py-2 bg-primary-dark hover:bg-secondary group rounded-l-full rounded-r-full max-w-fit cursor-pointer'
+        buttonStyles,
+        'bg-primary-dark hover:bg-secondary'
       )}
-      onClick={() => onClick()}
+      onClick={() => onClick?.()}
     >
       <Text className="!text-accent group-hover:!text-accent-dark">
         {children}
@@ -31,9 +37,10 @@ const Button: React.FC<ButtonProps> = ({
     <button
       className={clsx(
         className,
-        'text-lg font-bold px-6 py-2 bg-accent-dark hover:bg-accent group rounded-l-full rounded-r-full max-w-fit cursor-pointer'
+        buttonStyles,
+        'bg-accent-dark hover:bg-accent'
       )}
-      onClick={() => onClick()}
+      onClick={() => onClick?.()}
     >
       <Text className="!text-primary group-hover:!text-primary-dark">
         {children}

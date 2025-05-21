@@ -80,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
         'w-[96.5%] h-12 bg-primary-dark shadow-2xl flex items-center px-12 rounded-4xl rounded-t-none z-20 flex justify-between'
       )}
     >
-      <div className="flex">
+      <div className="flex h-fit -mt-2">
         {tabs.map((tab) => {
           return (
             <button key={tab.value} onClick={() => onTabClick(tab.value)}>
@@ -91,7 +91,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           );
         })}
       </div>
-      <div className="flex">
+      <div className="flex h-fit -mt-2">
         {socials.map((social) => {
           return (
             <a

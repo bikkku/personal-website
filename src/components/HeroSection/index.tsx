@@ -18,7 +18,11 @@ function HeroSection() {
         <Text className="!text-xl !text-accent-dark font-bold !font-mono">
           Software Engineer based in AU/NZ
         </Text>
-        <Button onClick={onContact} className="ml-auto mt-12">
+        <Button
+          onClick={onContact}
+          className="ml-auto mt-12"
+          variant="inverted"
+        >
           Contact Me
         </Button>
       </div>

@@ -1,16 +1,34 @@
-import { Textarea } from '@heroui/react';
+import { addToast, Input, Textarea, ToastProvider } from '@heroui/react';
 import Heading from './Heading';
 import Text from './Text';
 import Button from './Button';
-import React from 'react';
+import emailjs from '@emailjs/browser';
 
 function Footer() {
-  const [message, setMessage] = React.useState('');
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  const sendEmail = () => {
-    if (message !== '') {
-      window.location.href = `mailto:jchuiwnl@gmail.com?subject=Message from website&body=${message}`;
-    }
+    emailjs
+      .sendForm(
+        'service_d4ix2oc',
+        'template_cv5m1h4',
+        e.target,
+        'YZai2jswJpcpME0H2'
+      )
+      .then(
+        (response) => {
+          addToast({
+            title: 'Success!',
+            description: `${response.text}!, Email sent.`,
+          });
+        },
+        (error) => {
+          addToast({
+            title: 'Email not sent',
+            description: error,
+          });
+        }
+      );
   };
 
   return (
@@ -18,6 +36,7 @@ function Footer() {
       className="flex flex-col w-full items-center bg-primary-dark h-full"
       id="contact"
     >
+      <ToastProvider placement="top-center" toastOffset={60} />
       <Heading className="mt-12 mb-4 !text-3xl">Want to chat with me?</Heading>
       <Text className="!text-accent-dark md:max-w-1/2 lg:max-w-1/3 text-center">
         Feel free to leave me a message about anything that interests you, I
@@ -26,17 +45,27 @@ function Footer() {
         <Text className="!text-accent inline">jchuiwnl@gmail.com</Text>, use the
         text area below, or message me on Linkedin.
       </Text>
-      <Textarea
-        className="md: max-w-1/2 lg:max-w-1/3 my-6"
-        placeholder="Leave me a message..."
-        onChange={(e) => {
-          setMessage(e.target.value);
-        }}
-        value={message}
-      />
-      <Button onClick={() => sendEmail()} variant="inverted" className="mb-20">
-        Send Email
-      </Button>
+      <form
+        onSubmit={sendEmail}
+        className="md:max-w-1/2 lg:max-w-1/3 w-full flex flex-col"
+      >
+        <Input
+          className="w-full my-6"
+          label="Email"
+          type="email"
+          name="email_from"
+          id="email_from"
+        />
+        <Textarea
+          className="w-full mb-8"
+          name="message"
+          id="message"
+          placeholder="Leave me a message..."
+        />
+        <Button variant="inverted" className="mb-20 mx-auto" type="submit">
+          Send Email
+        </Button>
+      </form>
     </div>
   );
 }
