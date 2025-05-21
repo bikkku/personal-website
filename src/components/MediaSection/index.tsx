@@ -25,7 +25,7 @@ function MediaSection() {
         <LightGallery speed={400}>
           <img
             alt="totoro"
-            src="/assets/art/totoro.jpeg"
+            src="/personal-website/assets/art/totoro.jpeg"
             className="rounded-full md:max-w-1/2 border-4 border-primary mt-4 cursor-pointer"
           />
         </LightGallery>
@@ -118,11 +118,11 @@ function MediaSection() {
         <PhotoProvider>
           <div className="flex w-full">
             <div className="flex flex-col w-full mr-3">
-              <PhotoView src={`/assets/niko.jpg`}>
+              <PhotoView src={`/personal-website/assets/niko.jpg`}>
                 <img
                   className="border-4 border-primary rounded-lg mb-4 cursor-pointer"
                   alt={'niko'}
-                  src={`/assets/niko.jpg`}
+                  src={`/personal-website/assets/niko.jpg`}
                 />
               </PhotoView>
               <div className="rounded-full text-center bg-primary -mt-10 px-4 py-2 mx-auto">
@@ -133,18 +133,18 @@ function MediaSection() {
             </div>
 
             <div className="flex flex-col justify-between -gap-y-1 max-w-1/2">
-              <PhotoView src={`/assets/IEMmelb.jpg`}>
+              <PhotoView src={`/personal-website/assets/IEMmelb.jpg`}>
                 <img
                   className="border-4 border-primary rounded-lg mb-3 w-full max-h-1/2 cursor-pointer"
                   alt={'crowd'}
-                  src={`/assets/IEMmelb.jpg`}
+                  src={`/personal-website/assets/IEMmelb.jpg`}
                 />
               </PhotoView>
-              <PhotoView src={`/assets/melb_desk`}>
+              <PhotoView src={`/personal-website/assets/melb_desk`}>
                 <img
                   className="border-4 border-primary rounded-lg mb-3 w-full max-h-1/2 cursor-pointer"
                   alt={'analysts'}
-                  src={`/assets/melb_desk.jpg`}
+                  src={`/personal-website/assets/melb_desk.jpg`}
                 />
               </PhotoView>
             </div>

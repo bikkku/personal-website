@@ -15,21 +15,24 @@ const Gallery: React.FC<GalleryProps> = ({ className, main, images }) => {
       className={clsx(className, 'flex justify-between w-full h-fit max-h-fit')}
     >
       <PhotoProvider>
-        <PhotoView src={`/assets/gifs/${main.src}`}>
+        <PhotoView src={`/personal-website/assets/gifs/${main.src}`}>
           <img
             className="border-4 border-primary rounded-lg mr-3 h-full min-w-3/4 mb-4 cursor-pointer"
             alt={main.alt}
-            src={`/assets/gifs/${main.src}`}
+            src={`/personal-website/assets/gifs/${main.src}`}
           />
         </PhotoView>
         <div className="flex flex-col justify-between max-h-fit gap-[7.05px]">
           {images.map((item) => {
             return (
-              <PhotoView key={item.src} src={`/assets/gifs/${item.src}`}>
+              <PhotoView
+                key={item.src}
+                src={`/personal-website/assets/gifs/${item.src}`}
+              >
                 <img
                   className="border-4 border-primary rounded-lg w-full cursor-pointer"
                   alt={item.alt}
-                  src={`/assets/gifs/${item.src}`}
+                  src={`/personal-website/assets/gifs/${item.src}`}
                 />
               </PhotoView>
             );

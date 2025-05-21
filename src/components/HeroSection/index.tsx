@@ -9,7 +9,7 @@ function HeroSection() {
       <div className="w-full h-screen relative pb-40">
         <img
           alt="heroimg"
-          src={'/assets/trike.jpg'}
+          src={'/personal-website/assets/trike.jpg'}
           className="object-cover w-full h-full mt-4 rounded-4xl"
         />
       </div>

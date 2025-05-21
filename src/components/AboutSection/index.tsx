@@ -35,7 +35,7 @@ function AboutSection() {
               >
                 <div className="flex flex-col m-auto">
                   <img
-                    src={`/svg/skills/${skill.src}.svg`}
+                    src={`/personal-website/svg/skills/${skill.src}.svg`}
                     className="w-14 h-14 mx-auto"
                   />
                   <Text className="text-sm lg:text-md text-primary font-bold font-mono">

@@ -102,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
               download={social.src === 'download' ? true : undefined}
             >
               <img
-                src={`/svg/socials/${social.src}.svg`}
+                src={`/personal-website/svg/socials/${social.src}.svg`}
                 className="max-h-7 mx-4"
               />
             </a>
