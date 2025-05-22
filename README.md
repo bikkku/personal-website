@@ -6,6 +6,7 @@ Still needs a bunch of styling upgrades, but basic info is all there.
 - Fix mobile styling
 - Mess around with animation libraries
 - Update CV file
+- favicon
 - Add custom domain
 
 Colour scheme is Umbreon's colour palette from [here](https://pokepalettes.com/#umbreon).
