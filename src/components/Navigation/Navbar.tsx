@@ -43,7 +43,7 @@ const socials = [
   },
   {
     title: 'Download CV',
-    link: '/JackChuCV2025.pdf',
+    link: '/JackChu2025.pdf',
     src: 'download',
   },
 ];

@@ -46,6 +46,10 @@ function AboutSection() {
             );
           })}
         </div>
+        <Text className="mt-4">
+          Experience wise, I have worked in agile, startup environments where I
+          was exposed to many of the skill listed above, and more.
+        </Text>
       </div>
       <div className="w-full md:min-w-120 md:max-w-1/3 h-full">
         <Heading className="!text-3xl mb-2 !text-primary">Projects</Heading>
@@ -70,7 +74,6 @@ function AboutSection() {
           {projects.map((project) => {
             return (
               <AccordionItem
-                className="my-1 w-full"
                 key={project.id}
                 aria-label={project.title}
                 title={
