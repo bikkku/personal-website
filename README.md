@@ -3,7 +3,7 @@ Still needs a bunch of styling upgrades, but basic info is all there.
 [Link to website](https://bikkku.github.io/personal-website/)
 ### TODO:
 - Add more to skills section
-- Fix responsiveness
+- Fix resize responsiveness
 - Mess around with animation libraries
 - Update CV file
 - favicon
