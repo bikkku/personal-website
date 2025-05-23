@@ -1,4 +1,13 @@
-# WORK IN PROGRESS
+## Page is deployed but still a work in progress
+Still needs a bunch of styling upgrades, but basic info is all there.
+[Link to website](https://bikkku.github.io/personal-website/)
+### TODO:
+- Add more to skills section
+- Fix resize responsiveness
+- Mess around with animation libraries
+- Update CV file
+- favicon
+- Add custom domain
 
 Colour scheme is Umbreon's colour palette from [here](https://pokepalettes.com/#umbreon).
 
