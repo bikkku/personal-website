@@ -3,7 +3,12 @@ import NameDisplay from '../NameDisplay';
 import Text from '../Text';
 
 function HeroSection() {
-  const onContact = () => {};
+  const onContact = () => {
+    const element = document.getElementById('contact');
+    element?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
   return (
     <div className="flex justify-between gap-12 min-h-screen mt-12">
       <div className="w-full h-screen relative pb-40">
